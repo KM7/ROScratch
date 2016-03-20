@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>ROScratch by Jxr227</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>ROScratch</h1>
+        <h2>A ROS Extension for ScratchX designed for Turtlebots</h2>
+        <a href="https://github.com/Jxr227/ROScratch" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a id="welcome-to-easyros" class="anchor" href="#welcome-to-easyros" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to EasyROS</h2>
+
+<p>ROS (Robot Operating System) is a set of software and tools used to create robotics applications. ROS can interact with many programming languages to allow them to control robots that support it. JavaScript is one of these languages, and the EasyROS Scratch Extension will provide an interface for young learners in Computer Science and Computational Thinking. EasyROS can be run on the laptops provided with Turtlebots, or alternatively from another PC on the same network, and the extension provides functionality for connected across the network easily. </p>
+
+<h2>
+<a id="turtlebots" class="anchor" href="#turtlebots" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Turtlebots</h2>
+
+<p><a href="http://www.turtlebot.com/">Turtlebots</a> are a low-cost but powerful piece of robotics equipment. They offer a laser sensor(Xbox Kinect), and a bumper sensor. They're extremely portable and a brilliant base for starting to program robots. The robot bases are very robust, making them ideal for teaching children to program robots with Scratch.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<h3>
+<a id="scratchx" class="anchor" href="#scratchx" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ScratchX</h3>
+
+<ul>
+<li>ScratchX works on Google Chrome, tests with Mozille Firefox didn't allow the extension to be loaded.</li>
+<li>If using Chrome on a linux based machine, be sure to install the official Google Chrome application, and not Chromium, as this also doesn't seem to be compatible with ScratchX.</li>
+<li>An internet connection is not required. For using ScratchX on the robots' laptops, a HTTPServer can be run, by downloading ScratchX <a href="https://github.com/LLK/scratchx/">here</a>
+</li>
+<li>An internet connection, however, will allow the official <a href="http://scratchx.org/">ScratchX</a> website to be used to load the extension. </li>
+</ul>
+
+<h3>
+<a id="turtlebot-laptops" class="anchor" href="#turtlebot-laptops" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Turtlebot Laptops</h3>
+
+<ul>
+<li>Some Knowledge of the Ubuntu Operating System is helpful, although not integral. </li>
+<li>However, knowledge of the Ubuntu Operating System is expected for the initial setup of the Turtlebots.</li>
+<li>This project has been designed to be compatible with Ubuntu 14.04, running ROS-Indigo.</li>
+<li>A full installation guide for the Turtlebots, including the ROS-Indigo installation can be found <a href="http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation">here</a>
+</li>
+<li>This installation should be inclusive of all of the drivers used in this extension.</li>
+<li>An internet connection is required to install this.</li>
+</ul>
+
+<h2>
+<a id="turtlebot-setup" class="anchor" href="#turtlebot-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Turtlebot Setup</h2>
+
+<h3>
+<a id="turtlebot-setup-required-for-both" class="anchor" href="#turtlebot-setup-required-for-both" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Turtlebot Setup (Required for both)</h3>
+
+<ul>
+<li>These steps assume you have followed the guide to install ROS-Indigo linked above and have a successful installation of ROS-Indigo and the Turtlebot proprietary drivers.</li>
+<li>Download the .launch file that can be found <a href="PUT%20LINK">herePUTLINK</a>
+</li>
+<li>This can be anywhere on the machine, as long as you're aware of its location.</li>
+<li>To get the Turtlebot ready for the extension you need to run this launch file. This can be done by running the following on a terminal, whilst in the directory of the launch file.
+<code>roslaunch scratch_turtlebot.launch</code>
+</li>
+<li>This should start up all of the drivers required for the extension.</li>
+</ul>
+
+<h3>
+<a id="using-scratchx-on-the-ubuntu-laptops" class="anchor" href="#using-scratchx-on-the-ubuntu-laptops" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using ScratchX on the Ubuntu Laptops</h3>
+
+<ul>
+<li>These steps are to be followed if you're not using additional computers to connect to the Turtlebot laptops.</li>
+<li>If you do not have an internet connection whilst using the extension, you should download the ScratchX files listed above, and from the base directory of the folder downloaded run the following.
+<code>python -m SimpleHTTPServer</code>
+</li>
+<li>If you do have an internet connection you can instead use the online version <a href="http://jxr227.github.io/easyros/easyros.js">here</a>
+</li>
+<li>When loading the extension it will ask for an IP address. Use 'localhost'.
+### Using windows PCs to connect to the Turtlebots</li>
+<li>If you're using different PCs to connect to the turtlebots, they need to be on the same network.</li>
+<li>The connection should not use a proxy.</li>
+<li>Load ScratchX on the PC that you want Scratch loaded on, and go <a href="http://jxr227.github.io/easyros/easyros.js">here</a>
+</li>
+<li>It will ask you for an IP Address. To get this, open a terminal on the Turtlebot's laptop and type <code>ifconfig</code> and hit enter. </li>
+<li>If you're using wifi it will probably come up under the name wlan0, find the number after <code>inet addr</code> in a similar format to 192.168.1.2</li>
+<li>This is the IP address to use to connect to this specific Turtlebot.</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Jxr227/ROScratch/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Jxr227/ROScratch/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Jxr227/ROScratch"></a> is maintained by <a href="https://github.com/Jxr227">Jxr227</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
